@@ -1,11 +1,11 @@
 using NUnit.Framework;
-using Step01.Parsers;
-using Step01.Enums;
-using Step01;
+using Step02.Parsers;
+using Step02.Enums;
+using Step02;
 using System;
 
 
-namespace Step01Tests
+namespace Step02Tests
 {
   [TestFixture]
   public class Tests
@@ -39,10 +39,8 @@ namespace Step01Tests
       result = NumbersParser.Parse("4,tytyt");
       Assert.AreEqual(result, new int[] { 4, 0 });
 
-      // Should throw exception b/c of max 2 number rule.
-      Assert.Throws(Is.TypeOf<Exception>()
-        .And.Message.EqualTo("More than two numbers were provided."),
-        delegate { NumbersParser.Parse("6,3,7"); });
+      result = NumbersParser.Parse("6,3,7,2");
+      Assert.AreEqual(result, new int[] { 6, 3, 7, 2 });
     }
 
 

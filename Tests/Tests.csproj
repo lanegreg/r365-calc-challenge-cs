@@ -14,5 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Step01\Step01.csproj" />
+    <ProjectReference Include="..\Step02\Step02.csproj" />
   </ItemGroup>
 </Project>
