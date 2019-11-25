@@ -1,20 +1,21 @@
 ﻿using System;
-using Step02.Parsers;
-using Step02.Enums;
+using Step03.Parsers;
+using Step03.Enums;
 
 
-namespace Step02
+namespace Step03
 {
   class Program
   {
     static void Main(string[] args)
     {
       // Usage/Example help blurb.
-      Console.WriteLine("Step 02\n");
+      Console.WriteLine("Step 03\n");
       Console.WriteLine("=============================================");
       Console.WriteLine("Usage: {operation} {n,n}");
       Console.WriteLine("{operation:string = [add]} {n:integer}");
-      Console.WriteLine("Example: add 2,6");
+      Console.WriteLine("Delimiters allowed: [',', '\\n']");
+      Console.WriteLine("Example: add 2,6\\n3\nResult: 11");
       Console.WriteLine("=============================================\n");
 
 

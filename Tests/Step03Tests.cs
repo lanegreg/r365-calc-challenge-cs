@@ -1,11 +1,11 @@
-using NUnit.Framework;
-using Step02.Parsers;
-using Step02.Enums;
-using Step02;
 using System;
+using NUnit.Framework;
+using Step03.Parsers;
+using Step03.Enums;
+using Step03;
 
 
-namespace Step02Tests
+namespace Step03Tests
 {
   [TestFixture]
   public class Tests
@@ -41,6 +41,10 @@ namespace Step02Tests
 
       result = NumbersParser.Parse("1,2,3,4,5,6,7,8,9,10,11,12");
       Assert.AreEqual(result, new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
+
+      // Test for using a `\n` delimiter.
+      result = NumbersParser.Parse("3,4\n5,6\n9");
+      Assert.AreEqual(result, new int[] { 3, 4, 5, 6, 9 });
     }
 
 
